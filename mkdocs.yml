@@ -1,0 +1,43 @@
+site_name: Hedged B2B Docs
+site_url: https://b2bdocs.hedged.in/
+site_description: >-
+  A curated set of resources for becoming a full stack developer.
+repo_name: BlackcurrantLabs/hedged-b2b
+repo_url: https://github.com/BlackcurrantLabs/hedged-b2b
+copyright: Copyright &copy; 2016 - 2023 Blackcurrant Labs Pvt. Ltd.
+
+nav:
+  - Home: 
+    - Introduction: index.md
+  - APIs:
+    - Introduction: APIs/index.md
+  - Postback:
+    - Introduction: Postback/index.md
+  
+
+theme:
+  name: material
+  logo: assets/logo-icon-white.png
+  favicon: assets/logo-icon-white.png
+  palette:
+    scheme: default
+    primary: deep purple
+    accent: green
+  feature:
+    tabs: true
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.tracking
+    - navigation.instant
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
