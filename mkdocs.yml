@@ -21,7 +21,7 @@ theme:
   favicon: assets/logo.svg
   palette:
     scheme: default
-    primary: deep purple
+    primary: black
     accent: green
   feature:
     tabs: true
