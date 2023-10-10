@@ -17,9 +17,10 @@ Available filters:
       - target:
           Either `HIGH_RISK_HIGH_REWARD`, `BROKERAGE_INTENSIVE`, `SPECIAL_EVENT`, `HIGH_FREQUENCY_TRADE` or `ALL` based on recommendation target
   
-3. ### GET /get_b2b_recommendation:
+3. ### GET /get_b2b_recommendation?recommendationId=2:
 Get full details and history of a recommendation that you are subscribed to.
-Please call /list_b2b_recommendations to get the recommendationId
+Please call /list_b2b_recommendations to get the recommendationId.
+Send the request with the `recommendationId` present in the query parameter
   
 ## Responses:
 - 200 Success:
