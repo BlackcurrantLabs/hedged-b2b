@@ -19,7 +19,7 @@ Available filters:
   
 3. ### GET /get_b2b_recommendation?recommendationId=2:
 Get full details and history of a recommendation that you are subscribed to.
-Please call [/list_b2b_recommendations](#get-/list_b2b_recommendations:) to get the recommendationId.
+Please call [/list_b2b_recommendations](#get-list_b2b_recommendations) to get the recommendationId.
 Send the request with the `recommendationId` present in the query parameter
   
 ## Responses:
