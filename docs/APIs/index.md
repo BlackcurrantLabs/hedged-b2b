@@ -1,5 +1,6 @@
 # Hedged B2B
 APIs to get details of the recommendations the user is subscribed to.
+
 Please visit the <a href="https://api.core.hedged.online/b2b-swagger/"><button style="unset:all; padding: 0.3rem; border-radius: 5px; background-color:#4051b5; color:white; cursor:pointer;">Swagger Page</button></a> for more details.
 
 ## APIs
