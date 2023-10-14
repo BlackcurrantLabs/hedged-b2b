@@ -28,7 +28,7 @@ There are 3 types of events:
 
 2.  MODIFIED:
 
-        When a recommendation is published, expect the following response:
+        When a recommendation is updated after being published, expect the following response:
 
     | Object Property    |      Value   | Remarks    |
     |--------------------|:------------:|-----------:|
@@ -38,7 +38,7 @@ There are 3 types of events:
     | legsModified | B2B Recommendation Leg (Object) | The legs that were updated/modified as part of this update. |
     | legsExited | B2B Recommendation Leg (Object) | The legs that were exited as part of this update. |
     
-    Please refer to the Recommendation object's B2BRecommendationLegs property for further details 
+    Please refer to the Recommendation object's `B2BRecommendationLegs`` property for further details of the BB Recommendation Leg object
 
 3.  CLOSED:
 
@@ -166,6 +166,6 @@ These components are arranged to make up the full Recommendation object:
 }
 ```
 
-The object properties are named in a self-explanatory manner. Here we have added references to the data-type of the property and further description in the comments to provide you with more context.
+The object properties are named in a self-explanatory manner. However, we have added references to the data-type of the property and further description in the comments to provide you with more context.
 
 This is the data you would recieve on the `b2BRecommendation` field of your post back call.
