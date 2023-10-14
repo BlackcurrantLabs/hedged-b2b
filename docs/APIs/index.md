@@ -12,7 +12,7 @@ Lists all recommendations that you are subscribed to.
 You can optionally send a preference for filtering out your recommendations.
 Available filters:
       - type:
-          Either `EQUITY` or `FNO` based on recommedation type.
+          Either `EQUITY` or `FNO` based on recommendation type.
       - bias:
           Either `BEARISH`, `BULLISH` or `NEUTRAL` based on recommendation type
       - target:

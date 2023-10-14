@@ -1,9 +1,9 @@
 # Hedged B2B API docs
 
-Hedged provides B2B Apis and postbacks for the recommendations it offers.
-This repository documents the available api calls and how to use them.
+Hedged provides B2B APIs and postbacks for the recommendations it offers.
+This repository documents the available API calls and how to use them.
 
-!!! note "Onboarding"
+!!! Note "Onboarding"
 
     The onboarding for B2B partners is currently offline.
     Please get in touch at shiv.kumar@octanom.com for the partner credentials.

@@ -1,8 +1,8 @@
 # Post Back
 
-A postback url would allow you to recieve updates on recommendations that you have subscribed to.
+A postback URL would allow you to receive updates on recommendations that you have subscribed to.
 
-To use Postback, please add your postback url through the [console](https://core.hedged.online/b2b/account). After this, have a server at this postback url to recieve events on the recommendations.
+To use Postback, please add your postback URL through the [console](https://core.hedged.online/b2b/account). After this, have a server at this postback url to receive events on the recommendations.
 
 ## Events
 
@@ -24,7 +24,7 @@ There are 3 types of events:
     | Object Property    |      Value   | Remarks    |
     |--------------------|:------------:|-----------:|
     | eventType          |  "PUBLISHED" | This tells you the type of event among the 3 types |
-    | b2BRecommendation  |  [Recommendation Object](#recommendation-object)  | This will give you the full details of the corresponding recommendation object with it's legs and history |
+    | b2BRecommendation  |  [Recommendation Object](#recommendation-object)  | This will give you the full details of the corresponding recommendation object, with its legs and history |
 
 2.  MODIFIED:
 
@@ -33,12 +33,12 @@ There are 3 types of events:
     | Object Property    |      Value   | Remarks    |
     |--------------------|:------------:|-----------:|
     | eventType          |  "PUBLISHED" | This tells you the type of event among the 3 types |
-    | b2BRecommendation  |  [Recommendation Object](#recommendation-object)  | This will give you the full details of the corresponding recommendation object with it's legs and history |
+    | b2BRecommendation  |  [Recommendation Object](#recommendation-object)  | This will give you the full details of the corresponding recommendation object, with its legs and history |
     | legsAdded | B2B Recommendation Leg (Object) | The legs that were added as part of this update. |
     | legsModified | B2B Recommendation Leg (Object) | The legs that were updated/modified as part of this update. |
     | legsExited | B2B Recommendation Leg (Object) | The legs that were exited as part of this update. |
     
-    Please refer to the Recommendation object's `B2BRecommendationLegs`` property for further details of the BB Recommendation Leg object
+    Please refer to the Recommendation object's `B2BRecommendationLegs` property for further details of the BB Recommendation Leg object
 
 3.  CLOSED:
 
@@ -47,7 +47,7 @@ There are 3 types of events:
     | Object Property    |      Value   | Remarks    |
     |--------------------|:------------:|-----------:|
     | eventType          |  "CLOSED" | This tells you the type of event among the 3 types |
-    | b2BRecommendation  |  [Recommendation Object](#recommendation-object)  | This will give you the full details of the corresponding recommendation object with it's legs and history |
+    | b2BRecommendation  |  [Recommendation Object](#recommendation-object)  | This will give you the full details of the corresponding recommendation object, with its legs and history |
 
 ## Recommendation Object
 The recommendation object has the following components:
@@ -168,4 +168,4 @@ These components are arranged to make up the full Recommendation object:
 
 The object properties are named in a self-explanatory manner. However, we have added references to the data-type of the property and further description in the comments to provide you with more context.
 
-This is the data you would recieve on the `b2BRecommendation` field of your post back call.
+This is the data you would receive on the `b2BRecommendation` field of your post back call.
