@@ -26,37 +26,36 @@ Send the request with the `recommendationId` present in the query parameter
 4. ### GET /predictions/
 A set of APIs for predictions made through integration with [Green Hedged](), each will send you a JSON response of the prediction.
 
-    4.a. #### GET /predictions/get_index_gauge:
-	Get Green predictions on Index Gauge.
+#### GET /predictions/get_index_gauge:
+Get Green predictions on Index Gauge
+Expected payload:
+```jsonc
+{
+    Index: "string (one of 'nifty' or 'banknifty')",
+    History: "boolean (true or false); optional"
+}
+```
 
-	Expected payload:
-	```jsonc
-	{
-	    Index: "string (one of 'nifty' or 'banknifty')",
-	    History: "boolean (true or false); optional"
-	}
-	```
+If `History` is set to `true`, you would get an array of the predictions which would look like this:
+```jsonc
+[
+    {
+        Time: "number",
+        UTM: "number",
+        Price: "number" 
+    }, 
+    ...
+]
+```
 
-	If `History` is set to `true`, you would get an array of the predictions which would look like this:
-	```jsonc
-	[
-	    {
-	        Time: "number",
-	        UTM: "number",
-	        Price: "number" 
-	    }, 
-	    ...
-	]
-	```
-
-	Else you would just get the latest prediction, which would be of this shape:
-	```jsonc
-	{
-	    Time: "number",
-	    UTM: "number",
-	    Price: "number" 
-	}
-	```
+Else you would just get the latest prediction, which would be of this shape:
+```jsonc
+{
+    Time: "number",
+    UTM: "number",
+    Price: "number" 
+}
+```
 
 #### GET /predictions/get_index_direction:
 Get Green predictions on Index Direction
