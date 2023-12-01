@@ -28,7 +28,7 @@ Please visit the <a href="https://api.core.hedged.online/b2b-swagger/"><button s
 4. ### GET /greein/
    A set of APIs for suggestions made through integration with [Greein Hedged](), each will send you a JSON response of the prediction.
 
-!!! info "Skip Sections"
+!!! info "Warning about the Responses"
 
     Some of the responses from these APIs might change without prior notice. Rest assured, the
 
