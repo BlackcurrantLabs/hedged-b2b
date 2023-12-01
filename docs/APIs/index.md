@@ -28,6 +28,10 @@ Please visit the <a href="https://api.core.hedged.online/b2b-swagger/"><button s
 4. ### GET /suggestions/
    A set of APIs for suggestions made through integration with [Green Hedged](), each will send you a JSON response of the prediction.
 
+!!! info "Skip Sections"
+
+    Some of the responses from these APIs might change without prior notice. Rest assured, the Expected payload would be updated here.
+
 #### GET /suggestions/get_index_gauge:
 
 Get Green suggestions on Index Gauge
