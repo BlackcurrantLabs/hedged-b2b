@@ -25,16 +25,16 @@ Please visit the <a href="https://api.core.hedged.online/b2b-swagger/"><button s
    Please call [/list_b2b_recommendations](#get-list_b2b_recommendations) to get the recommendationId.
    Send the request with the `recommendationId` present in the query parameter
 
-4. ### GET /suggestions/
-   A set of APIs for suggestions made through integration with [Green Hedged](), each will send you a JSON response of the prediction.
+4. ### GET /greein/
+   A set of APIs for suggestions made through integration with [Greein Hedged](), each will send you a JSON response of the prediction.
 
 !!! info "Skip Sections"
 
     Some of the responses from these APIs might change without prior notice. Rest assured, the Expected payload would be updated here.
 
-#### GET /suggestions/get_index_gauge:
+#### GET /greein/get_index_gauge:
 
-Get Green suggestions on Index Gauge
+Get Greein suggestions on Index Gauge
 Expected payload:
 
 ```jsonc
@@ -67,9 +67,9 @@ Else you would just get the latest prediction, which would be of this shape:
 }
 ```
 
-#### GET /suggestions/get_index_direction:
+#### GET /greein/get_index_direction:
 
-Get Green suggestions on Index Direction
+Get Greein suggestions on Index Direction
 Expected payload:
 
 ```jsonc
@@ -104,9 +104,9 @@ Else you would just get the latest prediction, which would be of this shape:
 }
 ```
 
-#### GET /suggestions/get_OMD:
+#### GET /greein/get_OMD:
 
-Get Green suggestions on Options Momentum Driver (OMD)
+Get Greein suggestions on Options Momentum Driver (OMD)
 Expected payload:
 
 ```jsonc
@@ -135,9 +135,9 @@ The response would be of the following shape:
 ]
 ```
 
-#### GET /suggestions/get_OIO:
+#### GET /greein/get_OIO:
 
-Get Green suggestions on Open Interest Outlook (OIO)
+Get Greein suggestions on Open Interest Outlook (OIO)
 Expected payload:
 
 ```jsonc
@@ -164,9 +164,9 @@ The response would be of the following shape:
 ]
 ```
 
-#### GET /suggestions/get_OPC:
+#### GET /greein/get_OPC:
 
-Get Green suggestions on Options Prem Change (OPC)
+Get Greein suggestions on Options Prem Change (OPC)
 Expected payload:
 
 ```jsonc
@@ -193,9 +193,9 @@ The response would be of the following shape:
 ]
 ```
 
-#### GET /suggestions/get_OIM:
+#### GET /greein/get_OIM:
 
-Get Green suggestions on OI Multistrike (OIM)
+Get Greein suggestions on OI Multistrike (OIM)
 Expected payload:
 
 ```jsonc
@@ -224,9 +224,9 @@ The response would be of the following shape:
 ]
 ```
 
-#### GET /suggestions/get_EO:
+#### GET /greein/get_EO:
 
-Get Green suggestions on Equity Opportunities (EO)
+Get Greein suggestions on Equity Opportunities (EO)
 Expected payload:
 
 ```jsonc
@@ -249,9 +249,9 @@ The response would be of the following shape:
 ]
 ```
 
-#### GET /suggestions/get_SO:
+#### GET /greein/get_SO:
 
-Get Green suggestions on Stock Outlook (SO)
+Get Greein suggestions on Stock Outlook (SO)
 Expected payload:
 
 ```jsonc
@@ -274,9 +274,9 @@ The response would be of the following shape:
 ]
 ```
 
-#### GET /suggestions/get_heatmap:
+#### GET /greein/get_heatmap:
 
-Get Heatmap from Green
+Get Heatmap from Greein
 Expected payload:
 
 ```jsonc
