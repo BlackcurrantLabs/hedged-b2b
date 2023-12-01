@@ -30,11 +30,14 @@ Please visit the <a href="https://api.core.hedged.online/b2b-swagger/"><button s
 
 !!! info "Skip Sections"
 
-    Some of the responses from these APIs might change without prior notice. Rest assured, the Expected payload would be updated here.
+    Some of the responses from these APIs might change without prior notice. Rest assured, the
+
+Expected payload would be updated here.
 
 #### GET /greein/get_index_gauge:
 
 Get Greein suggestions on Index Gauge
+
 Expected payload:
 
 ```jsonc
@@ -70,6 +73,7 @@ Else you would just get the latest prediction, which would be of this shape:
 #### GET /greein/get_index_direction:
 
 Get Greein suggestions on Index Direction
+
 Expected payload:
 
 ```jsonc
@@ -107,6 +111,7 @@ Else you would just get the latest prediction, which would be of this shape:
 #### GET /greein/get_OMD:
 
 Get Greein suggestions on Options Momentum Driver (OMD)
+
 Expected payload:
 
 ```jsonc
@@ -138,6 +143,7 @@ The response would be of the following shape:
 #### GET /greein/get_OIO:
 
 Get Greein suggestions on Open Interest Outlook (OIO)
+
 Expected payload:
 
 ```jsonc
@@ -167,6 +173,7 @@ The response would be of the following shape:
 #### GET /greein/get_OPC:
 
 Get Greein suggestions on Options Prem Change (OPC)
+
 Expected payload:
 
 ```jsonc
@@ -196,6 +203,7 @@ The response would be of the following shape:
 #### GET /greein/get_OIM:
 
 Get Greein suggestions on OI Multistrike (OIM)
+
 Expected payload:
 
 ```jsonc
@@ -227,6 +235,7 @@ The response would be of the following shape:
 #### GET /greein/get_EO:
 
 Get Greein suggestions on Equity Opportunities (EO)
+
 Expected payload:
 
 ```jsonc
@@ -252,6 +261,7 @@ The response would be of the following shape:
 #### GET /greein/get_SO:
 
 Get Greein suggestions on Stock Outlook (SO)
+
 Expected payload:
 
 ```jsonc
@@ -277,6 +287,7 @@ The response would be of the following shape:
 #### GET /greein/get_heatmap:
 
 Get Heatmap from Greein
+
 Expected payload:
 
 ```jsonc
