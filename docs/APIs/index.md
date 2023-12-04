@@ -240,7 +240,7 @@ Expected payload:
 
 ```jsonc
 {
-  "Type": "string (one of 'Daily' or 'Weekly')"
+  "Type": "string (one of 'daily' or 'weekly')"
 }
 ```
 
