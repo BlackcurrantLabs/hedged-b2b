@@ -8,12 +8,14 @@ To use Postback, please add your postback URL through the [console](https://core
 
 There are 3 types of events:
 
-1. Published Event (PUBLISHED): 
-    When the recommendation actually gets published.
-2. Update Event (MODIFIED): 
-    Whenever there are updates to one of the published recommendation.
-3. Closed Event (CLOSED): 
-    When the recommendation finally gets closed.
+1. Published Event (PUBLISHED):
+   When the recommendation actually gets published.
+2. Update Event (MODIFIED):
+   Whenever there are updates to one of the published recommendation.
+3. Closed Event (CLOSED):
+   When the recommendation finally gets closed.
+4. GreeIn Suggestions:
+   When GreeIn sends us an update, we forward those updates to you based on your preferences.
 
 ## Expected body according to event
 
@@ -21,46 +23,51 @@ There are 3 types of events:
 
         When a recommendation is published, expect the following response:
 
-    | Object Property    |      Value   | Remarks    |
-    |--------------------|:------------:|-----------:|
-    | eventType          |  "PUBLISHED" | This tells you the type of event among the 3 types |
-    | b2BRecommendation  |  [Recommendation Object](#recommendation-object)  | This will give you the full details of the corresponding recommendation object, with its legs and history |
+    | Object Property   |                      Value                      |                                                                                                   Remarks |
+    | ----------------- | :---------------------------------------------: | --------------------------------------------------------------------------------------------------------: |
+    | eventType         |                   "PUBLISHED"                   |                                                        This tells you the type of event among the 3 types |
+    | b2BRecommendation | [Recommendation Object](#recommendation-object) | This will give you the full details of the corresponding recommendation object, with its legs and history |
 
 2.  MODIFIED:
 
         When a recommendation is updated after being published, expect the following response:
 
-    | Object Property    |      Value   | Remarks    |
-    |--------------------|:------------:|-----------:|
-    | eventType          |  "PUBLISHED" | This tells you the type of event among the 3 types |
-    | b2BRecommendation  |  [Recommendation Object](#recommendation-object)  | This will give you the full details of the corresponding recommendation object, with its legs and history |
-    | legsAdded | B2B Recommendation Leg (Object) | The legs that were added as part of this update. |
-    | legsModified | B2B Recommendation Leg (Object) | The legs that were updated/modified as part of this update. |
-    | legsExited | B2B Recommendation Leg (Object) | The legs that were exited as part of this update. |
-    
+    | Object Property   |                          Value                          |                                                                                                   Remarks |
+    | ----------------- | :-----------------------------------------------------: | --------------------------------------------------------------------------------------------------------: |
+    | eventType         |                       "PUBLISHED"                       |                                                        This tells you the type of event among the 3 types |
+    | b2BRecommendation |     [Recommendation Object](#recommendation-object)     | This will give you the full details of the corresponding recommendation object, with its legs and history |
+    | legsAdded         | [Recommendation Leg Object](#recommendation-leg-object) |                                                          The legs that were added as part of this update. |
+    | legsModified      | [Recommendation Leg Object](#recommendation-leg-object) |                                               The legs that were updated/modified as part of this update. |
+    | legsExited        | [Recommendation Leg Object](#recommendation-leg-object) |                                                         The legs that were exited as part of this update. |
+
     Please refer to the Recommendation object's `B2BRecommendationLegs` property for further details of the BB Recommendation Leg object
 
 3.  CLOSED:
 
         When a recommendation is closed, expect the following response:
 
-    | Object Property    |      Value   | Remarks    |
-    |--------------------|:------------:|-----------:|
-    | eventType          |  "CLOSED" | This tells you the type of event among the 3 types |
-    | b2BRecommendation  |  [Recommendation Object](#recommendation-object)  | This will give you the full details of the corresponding recommendation object, with its legs and history |
+    | Object Property   |                      Value                      |                                                                                                   Remarks |
+    | ----------------- | :---------------------------------------------: | --------------------------------------------------------------------------------------------------------: |
+    | eventType         |                    "CLOSED"                     |                                                        This tells you the type of event among the 3 types |
+    | b2BRecommendation | [Recommendation Object](#recommendation-object) | This will give you the full details of the corresponding recommendation object, with its legs and history |
+
+4.  GreeIn:
+
+        Please expect a hit to your postBack URL whenever there is a payload from GreeIn.
 
 ## Recommendation Object
+
 The recommendation object has the following components:
 
 - B2B Recommendation
-    - Instrument (of recommendation)
-    - Legs
-        - Instrument (of recommendation leg)
-        - Legs History
-    - History
-
+  - Instrument (of recommendation)
+  - Legs
+    - Instrument (of recommendation leg)
+    - Legs History
+  - History
 
 These components are arranged to make up the full Recommendation object:
+
 ```jsonc
 {
     "B2BRecommendation": {
@@ -105,53 +112,12 @@ These components are arranged to make up the full Recommendation object:
             "createdAt": "datetime",
             "updatedAt": "datetime",
         },
-        
+
         "B2BRecommendationLegs": [
             {
-                "id": "integer",
-                "uuid": "string",
-                "status": "string (one of 'ENTER' or 'EXIT')",
-                "action": "string (one of 'BUY' or 'SELL')",
-                "quantity": "number",
-                "entryPrice": "number (manually added)",
-                "exitPrice": "number (manually added)",
-                "entryAt": "datetime",
-                "exitAt": "datetime",
-                "mtm": "number",
-                "finalPnL": "number",
-                "sequenceInParent": "integer",
-                "entryParentVersion": "integer",
-                "exitParentVersion": "integer",
-                "instrumentId": "string (references the Instrument)",
-                
-                "Instrument": {
-                    "id": "string",
-                    "instrument_token": "number",
-                    "exchange_token": "number",
-                    "tradingsymbol": "string",
-                    "name": "string",
-                    "last_price": "number",
-                    "expiry": "string",
-                    "strike": "number",
-                    "tick_size": "number",
-                    "lot_size": "number",
-                    "instrument_type": "string (one of 'CE', 'PE', 'FUT' or 'EQ')",
-                    "segment": "string (one of 'NFO-FUT', 'NFO-OPT', 'NSE' or 'INDICES')",
-                    "exchange": "string (one of 'MCX', 'NFO' or 'NSE')",
-                    "createdAt": "datetime",
-                    "updatedAt": "datetime",
-                },
-      
-                "B2BRecommendationLegHistories": [{
-                    "id": "integer",
-                    "uuid": "string",
-                    "oldStatus": "string",
-                    "newStatus": "string",
-                    "comment": "string",
-                    "b2BRecommendationLegId": "integer (references the B2B Recommendation Leg)",
-                }]
+                B2BRecommendationLeg: "object (structure defined below for Recommendation Leg Object)"
             }
-        ],
+        ]
 
         "B2BRecommendationHistories": [
             {
@@ -169,3 +135,66 @@ These components are arranged to make up the full Recommendation object:
 The object properties are named in a self-explanatory manner. However, we have added references to the data-type of the property and further description in the comments to provide you with more context.
 
 This is the data you would receive on the `b2BRecommendation` field of your post back call.
+
+## Recommendation Leg Object
+
+The recommendation leg object has the following components:
+
+- B2B Recommendation Leg
+  - Instrument
+  - Legs History
+
+These components are arranged to make up the full Recommendation Leg's object:
+
+```jsonc
+{
+  "B2BRecommendationLeg": {
+    "id": "integer",
+    "uuid": "string",
+    "status": "string (one of 'ENTER' or 'EXIT')",
+    "action": "string (one of 'BUY' or 'SELL')",
+    "quantity": "number",
+    "entryPrice": "number (manually added)",
+    "exitPrice": "number (manually added)",
+    "entryAt": "datetime",
+    "exitAt": "datetime",
+    "mtm": "number",
+    "finalPnL": "number",
+    "sequenceInParent": "integer",
+    "entryParentVersion": "integer",
+    "exitParentVersion": "integer",
+    "instrumentId": "string (references the Instrument)",
+
+    "Instrument": {
+      "id": "string",
+      "instrument_token": "number",
+      "exchange_token": "number",
+      "tradingsymbol": "string",
+      "name": "string",
+      "last_price": "number",
+      "expiry": "string",
+      "strike": "number",
+      "tick_size": "number",
+      "lot_size": "number",
+      "instrument_type": "string (one of 'CE', 'PE', 'FUT' or 'EQ')",
+      "segment": "string (one of 'NFO-FUT', 'NFO-OPT', 'NSE' or 'INDICES')",
+      "exchange": "string (one of 'MCX', 'NFO' or 'NSE')",
+      "createdAt": "datetime",
+      "updatedAt": "datetime"
+    },
+
+    "B2BRecommendationLegHistories": [
+      {
+        "id": "integer",
+        "uuid": "string",
+        "oldStatus": "string",
+        "newStatus": "string",
+        "comment": "string",
+        "b2BRecommendationLegId": "integer (references the B2B Recommendation Leg)"
+      }
+    ]
+  }
+}
+```
+
+The object properties are named in a self-explanatory manner. However, we have added references to the data-type of the property and further description in the comments to provide you with more context.
