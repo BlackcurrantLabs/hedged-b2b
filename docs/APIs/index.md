@@ -4,6 +4,15 @@ APIs to get details of the recommendations the user is subscribed to.
 
 Please visit the <a href="https://api.core.hedged.online/b2b-swagger/"><button style="unset:all; padding: 0.3rem; border-radius: 5px; background-color:#4051b5; color:white; cursor:pointer;">Swagger Page</button></a> for more details.
 
+To access these APIs you would need api key and api secret which are available on b2b console.
+
+The header should contain two header keys :
+
+api-key
+
+api-secret
+
+
 ## APIs
 
 1. ### GET /me:
@@ -15,9 +24,8 @@ Please visit the <a href="https://api.core.hedged.online/b2b-swagger/"><button s
    Lists all recommendations that you are subscribed to.
    You can optionally send a preference for filtering out your recommendations.
    Available filters: - type:
-   Either `EQUITY` or `FNO` based on recommendation type. - bias:
-   Either `BEARISH`, `BULLISH` or `NEUTRAL` based on recommendation type - target:
-   Either `HIGH_RISK_HIGH_REWARD`, `BROKERAGE_INTENSIVE`, `SPECIAL_EVENT`, `HIGH_FREQUENCY_TRADE` or `ALL` based on recommendation target
+   Either `EQUITY`,`FNO` and `SIMPLY_HEDGED` based on recommendation type. - bias:
+   Either `BEARISH`, `BULLISH` , `NEUTRAL` and `BIDIRECTIONAL` based on recommendation type 
 
 3. ### GET /get_b2b_recommendation?recommendationId=2:
 
