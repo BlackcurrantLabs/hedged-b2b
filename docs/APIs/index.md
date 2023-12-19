@@ -2,7 +2,7 @@
 
 APIs to get details of the recommendations the user is subscribed to.
 
-Please visit the <a href="https://api.core.hedged.online/b2b-swagger/"><button style="unset:all; padding: 0.3rem; border-radius: 5px; background-color:#4051b5; color:white; cursor:pointer;">Swagger Page</button></a> for more details.
+Please visit the <a href="https://api.core.hedged.in/b2b-swagger/"><button style="unset:all; padding: 0.3rem; border-radius: 5px; background-color:#4051b5; color:white; cursor:pointer;">Swagger Page</button></a> for more details.
 
 To access these APIs you would need api key and api secret which are available on b2b console.
 
