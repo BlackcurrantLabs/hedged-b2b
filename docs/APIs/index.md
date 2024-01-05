@@ -12,7 +12,6 @@ api-key
 
 api-secret
 
-
 ## APIs
 
 1. ### GET /me:
@@ -25,7 +24,7 @@ api-secret
    You can optionally send a preference for filtering out your recommendations.
    Available filters: - type:
    Either `EQUITY`,`FNO` and `SIMPLY_HEDGED` based on recommendation type. - bias:
-   Either `BEARISH`, `BULLISH` , `NEUTRAL` and `BIDIRECTIONAL` based on recommendation type 
+   Either `BEARISH`, `BULLISH` , `NEUTRAL` and `BIDIRECTIONAL` based on recommendation type
 
 3. ### GET /get_b2b_recommendation?recommendationId=2:
 
@@ -41,6 +40,7 @@ api-secret
     Some of the responses from these APIs might change without prior notice. Rest assured, the
 
 Expected payload would be updated here.
+For APIs responding Time, please read it as HH:MM. For example, 1525 means 15:25 or 3:25 pm
 
 #### GET /greein/get_index_gauge:
 
