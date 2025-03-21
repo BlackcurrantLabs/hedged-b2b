@@ -62,7 +62,6 @@ There are 3 types of events:
         "createdAt": "2023-12-19T06:23:55.825Z",
         "updatedAt": "2023-12-19T06:25:19.000Z",
         "id": 8,
-        "generatedBy": "MANUAL",
         "target": "GROUP",
         "Instrument": {
           "id": "NSE:IRFC",
@@ -169,15 +168,6 @@ There are 3 types of events:
             "instrumentId": "NSE:IRFC"
           }
         ],
-        "B2BRecommendationTargets": [],
-        "TargetClasses": [
-          {
-            "id": 22,
-            "code": "$2b$08$YehP92gsOJqAbNUi/6/xL.w2dXNwV6CLMWNaJsmPk0bDDMXN7d2tG",
-            "name": "Simply Hedged",
-            "isDisabled": false
-          }
-        ],
         "instrumentId": "NSE:IRFC"
       },
       "eventType": "PUBLISHED"
@@ -230,7 +220,6 @@ There are 3 types of events:
         "createdAt": "2023-12-19T06:23:55.825Z",
         "updatedAt": "2023-12-19T06:33:02.000Z",
         "id": 8,
-        "generatedBy": "MANUAL",
         "target": "GROUP",
         "Instrument": {
           "id": "NSE:IRFC",
@@ -453,15 +442,6 @@ There are 3 types of events:
             "instrumentId": "NSE:IRFC"
           }
         ],
-        "B2BRecommendationTargets": [],
-        "TargetClasses": [
-          {
-            "id": 22,
-            "code": "$2b$08$YehP92gsOJqAbNUi/6/xL.w2dXNwV6CLMWNaJsmPk0bDDMXN7d2tG",
-            "name": "Simply Hedged",
-            "isDisabled": false
-          }
-        ],
         "instrumentId": "NSE:IRFC"
       },
       "eventType": "MODIFIED",
@@ -526,7 +506,6 @@ There are 3 types of events:
             "createdAt": "2023-12-19T06:23:55.825Z",
             "updatedAt": "2023-12-19T06:33:01.000Z",
             "id": 8,
-            "generatedBy": "MANUAL",
             "target": "GROUP",
             "Instrument": {
               "id": "NSE:IRFC",
@@ -659,15 +638,6 @@ There are 3 types of events:
                 "instrumentId": "NSE:IRFC"
               }
             ],
-            "B2BRecommendationTargets": [],
-            "TargetClasses": [
-              {
-                "id": 22,
-                "code": "$2b$08$YehP92gsOJqAbNUi/6/xL.w2dXNwV6CLMWNaJsmPk0bDDMXN7d2tG",
-                "name": "Simply Hedged",
-                "isDisabled": false
-              }
-            ],
             "instrumentId": "NSE:IRFC"
           },
           "exitPrice": null,
@@ -798,7 +768,6 @@ There are 3 types of events:
         "createdAt": "2023-12-19T07:32:07.851Z",
         "updatedAt": "2023-12-19T08:05:23.000Z",
         "id": 11,
-        "generatedBy": "MANUAL",
         "target": "GROUP",
         "Instrument": null,
         "B2BRecommendationHistories": [
@@ -932,15 +901,6 @@ There are 3 types of events:
             "instrumentId": "NFO:ADANIENT23DEC1850CE"
           }
         ],
-        "B2BRecommendationTargets": [],
-        "TargetClasses": [
-          {
-            "id": 22,
-            "code": "$2b$08$YehP92gsOJqAbNUi/6/xL.w2dXNwV6CLMWNaJsmPk0bDDMXN7d2tG",
-            "name": "Simply Hedged",
-            "isDisabled": false
-          }
-        ],
         "instrumentId": null
       },
       "eventType": "CLOSED"
@@ -994,7 +954,6 @@ These components are arranged to make up the full Recommendation object:
     "createdAt": "datetime",
     "updatedAt": "datetime",
     "id": "number",
-    "generatedBy": "string (one of 'MANUAL' or 'AUTOMATED')",
     "target": "string (one of 'GROUP' or 'INDIVIDUAL')",
     "Instrument": {
       "id": "string",
@@ -1099,15 +1058,6 @@ These components are arranged to make up the full Recommendation object:
         },
         "b2BRecommendationId": "integer",
         "instrumentId": "string"
-      }
-    ],
-    "B2BRecommendationTargets": [],
-    "TargetClasses": [
-      {
-        "id": "integer",
-        "code": "string",
-        "name": "string",
-        "isDisabled": "boolean"
       }
     ],
     "instrumentId": "string"
