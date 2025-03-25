@@ -103,7 +103,6 @@ api-secret
       [
         {
           "id": 7,
-          "generatedBy": "MANUAL",
           "capitalDeployed": 80,
           "expectedDurationInDays": 9,
           "target": "GROUP",
@@ -217,7 +216,6 @@ api-secret
    ```jsonc
          {
         "id": 7,
-        "generatedBy": "MANUAL",
         "capitalDeployed": 80,
         "expectedDurationInDays": 9,
         "target": "GROUP",
