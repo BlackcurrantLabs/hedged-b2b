@@ -14,72 +14,7 @@ api-secret
 
 ## APIs
 
-1. ### GET /me:
-
-   Get your profile with your preferences and account details.
-```jsonc
-   {
-       "id": "number",
-       "postbackUrl": "string",
-       "type": "string",
-       "createdAt": "datetime",
-       "updatedAt": "datetime",
-       "userId": "number",
-       "User": {
-           "id": "number",
-           "oldUid": "null|string",
-           "name": "string",
-           "email": "string",
-           "emailVerified": "boolean",
-           "emailDeliveryActive": "boolean",
-           "phone": "string",
-           "phoneVerified": "boolean",
-           "subscription": "string",
-           "subscriptionName": "string",
-           "subscriptionStart": "null|datetime",
-           "subscriptionExpiry": "null|datetime",
-           "lastActiveAt": "datetime",
-           "type": "string",
-           "isActive": "boolean",
-           "isUsingOldPassword": "boolean",
-           "tradingExperience": "null|string",
-           "city": "null|string",
-           "isOnboardingComplete": "boolean",
-           "pan": "null|string",
-           "isBillingInfoSet": "boolean",
-           "lifetimeValue": "number",
-           "noOfPurchases": "number",
-           "AdminPermission": "object",
-           "B2BPermission": {
-           },
-           "createdAt": "datetime",
-           "updatedAt": "datetime",
-           "isImpersonationEnabled": "boolean",
-           "birthDate": "null|datetime",
-           "whatsappPhone": "null|string",
-           "isSubscribedToNewsletter": "boolean",
-           "gender": "boolean",
-           "profilePic": "null|string"
-       },
-       "B2BRecommendationTargetClasses": [{
-               "id": "number",
-               "code": "string",
-               "name": "string",
-               "isDisabled": "boolean",
-               "createdAt": "datetime",
-               "updatedAt": "datetime",
-               "B2BSubscriberPivotTargetClass": {
-                   "createdAt": "datetime",
-                   "updatedAt": "datetime",
-                   "b2BSubscriberId": "number",
-                   "b2BRecommendationTargetClassId": "number"
-               }
-           }
-       ]
-   }
-```
-
-3. ### GET /list_b2b_recommendations:
+1. ### GET /list_b2b_recommendations:
 
    Lists all recommendations that you are subscribed to.
    You can optionally send a preference for filtering out your recommendations.
@@ -104,7 +39,6 @@ api-secret
         {
           "id": 7,
           "capitalDeployed": 80,
-          "expectedDurationInDays": 9,
           "target": "GROUP",
           "uuid": "da8cb392-ab4a-4fa8-ac0a-de407a21f835",
           "name": "Long Put",
@@ -147,7 +81,6 @@ api-secret
             "ISIN": null,
             "truedataSymbolId": "200000001",
             "truedataSymbol": "NIFTY 50",
-            "freezeQuantity": 225,
             "createdAt": "2024-10-04T11:28:22.534Z",
             "updatedAt": "2025-03-04T05:16:42.726Z"
           },
@@ -193,7 +126,6 @@ api-secret
                 "ISIN": "INE202E01016",
                 "truedataSymbolId": "100007530",
                 "truedataSymbol": "IREDA",
-                "freezeQuantity": null,
                 "createdAt": "2024-10-04T11:28:18.922Z",
                 "updatedAt": "2024-10-04T11:28:18.922Z"
               }
@@ -204,7 +136,7 @@ api-secret
    }
    ```
 
-5. ### GET /get_b2b_recommendation?recommendationId=2:
+2. ### GET /get_b2b_recommendation?recommendationId=2:
 
    Get full details and history of a recommendation that you are subscribed to.
    Please call [/list_b2b_recommendations](#get-list_b2b_recommendations) to get the recommendationId.
@@ -217,7 +149,6 @@ api-secret
          {
         "id": 7,
         "capitalDeployed": 80,
-        "expectedDurationInDays": 9,
         "target": "GROUP",
         "uuid": "da8cb392-ab4a-4fa8-ac0a-de407a21f835",
         "name": "Long Put",
@@ -260,7 +191,6 @@ api-secret
           "ISIN": null,
           "truedataSymbolId": "200000001",
           "truedataSymbol": "NIFTY 50",
-          "freezeQuantity": 225,
           "createdAt": "2024-10-04T11:28:22.534Z",
           "updatedAt": "2025-03-04T05:16:42.726Z"
         },
@@ -319,7 +249,6 @@ api-secret
               "ISIN": "INE202E01016",
               "truedataSymbolId": "100007530",
               "truedataSymbol": "IREDA",
-              "freezeQuantity": null,
               "createdAt": "2024-10-04T11:28:18.922Z",
               "updatedAt": "2024-10-04T11:28:18.922Z"
             }
